@@ -6,21 +6,16 @@ MAINTAINER Manigandan Dharmalingam <manigandan.jeff@gmail.com>
 #RUN apt-get install -y ffmpeg
 #ENTRYPOINT ["ffmpeg"]
 #-----------------------------------
+# Install Go
+RUN curl -O https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz && \
+    tar -xvf go1.8.linux-amd64.tar.gz && \
+    mv go /usr/local
 
-ENV DEBIAN_FRONTEND noninteractive
-ENV INITRD No
-ENV LANG en_US.UTF-8
-ENV GOVERSION 1.6.2
-ENV GOROOT /opt/go
-ENV GOPATH /root/.go
+RUN export PATH=$PATH:/usr/local/go/bin
 
-RUN cd /opt && wget https://storage.googleapis.com/golang/go${GOVERSION}.linux-amd64.tar.gz && \
-    tar zxf go${GOVERSION}.linux-amd64.tar.gz && rm go${GOVERSION}.linux-amd64.tar.gz && \
-    ln -s /opt/go/bin/go /usr/bin/ && \
-    mkdir $GOPATH && mkdir $GOPATH/bin
-
-CMD ["/usr/bin/go"]
+#CMD ["/usr/bin/go"]
 #-----------------------------------
+
 
 # install golang - glide
 RUN curl https://glide.sh/get | sh

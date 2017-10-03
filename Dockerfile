@@ -1,3 +1,4 @@
+#!/bin/bash
 FROM partlab/ubuntu
 
 MAINTAINER Manigandan Dharmalingam <manigandan.jeff@gmail.com>
@@ -17,7 +18,5 @@ RUN go version && go env
 
 #CMD ["/usr/bin/go"]
 #-----------------------------------
-
-
 # install golang - glide
 RUN curl https://glide.sh/get | sh

@@ -2,7 +2,8 @@
 FROM ubuntu:latest
 
 MAINTAINER Manigandan Dharmalingam <manigandan.jeff@gmail.com>
-
+RUN apt-get update
+RUN apt-get install -y wget git gcc
 #-----------------------------------
 # Install ffmpeg
 RUN wget -P /tmp/ffmpeg-release-64bit-static.tar.xz https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz
@@ -15,9 +16,6 @@ RUN cd /tmp/ffmpeg-3.3.2-64bit-static && cp ffmpeg /usr/bin/ffmpeg
 
 #-----------------------------------
 # Install Golang
-RUN apt-get update
-RUN apt-get install -y wget git gcc
-
 RUN wget -P /tmp https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz
 
 RUN tar -C /usr/local -xzf /tmp/go1.8.3.linux-amd64.tar.gz

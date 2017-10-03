@@ -1,5 +1,5 @@
 #!/bin/bash
-FROM partlab/ubuntu-golang
+FROM jheise/ubuntu-golang
 
 MAINTAINER Manigandan Dharmalingam <manigandan.jeff@gmail.com>
 

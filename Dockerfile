@@ -12,7 +12,7 @@ ENV GOVERSION 1.8.3
 
 RUN cd /opt && wget https://storage.googleapis.com/golang/go${GOVERSION}.linux-amd64.tar.gz && \
     tar zxf go${GOVERSION}.linux-amd64.tar.gz && rm go${GOVERSION}.linux-amd64.tar.gz && \
-    mv go /usr/local/
+    mv go /usr/local/ && mkdir /go/bin
 #-----------------------------------
 # Set environment variables.
 ENV INITRD No

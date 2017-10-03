@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM partlab/ubuntu
 
 MAINTAINER Manigandan Dharmalingam <manigandan.jeff@gmail.com>
 

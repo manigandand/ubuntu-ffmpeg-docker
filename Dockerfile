@@ -24,5 +24,5 @@ RUN curl https://glide.sh/get | sh
 #-----------------------------------
 # Install ffmpeg
 RUN wget -O /tmp/ffmpeg-release-64bit-static.tar.xz https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz
-RUN cd /tmp && tar xf ffmpeg-release-64bit-static.tar.xz
-RUN cd /tmp/ffmpeg-3.3.2-64bit-static && cp ffmpeg /usr/bin/ffmpeg && cp ffprobe /usr/bin/ffprobe && chmod +x /usr/bin/ffmpeg && chmod +x /usr/bin/ffprobe
+RUN cd /tmp && tar xf ffmpeg-release-64bit-static.tar.xz && cd /tmp/ffmpeg-3.3.2-64bit-static && cp ffmpeg /usr/bin/ffmpeg
+RUN cp ffprobe /usr/bin/ffprobe && chmod +x /usr/bin/ffmpeg && chmod +x /usr/bin/ffprobe

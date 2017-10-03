@@ -19,7 +19,7 @@ RUN cd /opt && wget https://storage.googleapis.com/golang/go${GOVERSION}.linux-a
     ln -s /opt/go/bin/go /usr/bin/ && \
     mkdir $GOPATH
 
-CMD ["/usr/bin/go"]
-
 # install golang - glide
 RUN curl https://glide.sh/get | sh
+
+CMD ["/usr/bin/go"]

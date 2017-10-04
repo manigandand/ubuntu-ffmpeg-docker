@@ -6,7 +6,7 @@ RUN apt-get update
 RUN apt-get install -y wget git gcc
 #-----------------------------------
 # Install ffmpeg
-RUN wget -P /tmp/ffmpeg-release-64bit-static.tar.xz https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz
+RUN wget -P /tmp https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz
 #RUN cd /tmp
 #RUN ls
 RUN tar -C /tmp -xzf /tmp/ffmpeg-release-64bit-static.tar.xz

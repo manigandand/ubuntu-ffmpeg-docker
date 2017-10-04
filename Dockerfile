@@ -11,8 +11,11 @@ RUN wget -P /tmp https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-
 #RUN ls
 RUN tar -C /tmp -xzf /tmp/ffmpeg-release-64bit-static.tar.xz
 RUN cd /tmp && ls
-RUN cd /tmp/ffmpeg-3.3.2-64bit-static && cp ffmpeg /usr/bin/ffmpeg
-#RUN cp ffprobe /usr/bin/ffprobe && chmod +x /usr/bin/ffmpeg && chmod +x /usr/bin/ffprobe
+RUN cd /tmp/ffmpeg-3.3.2-64bit-static && \
+    cp ffmpeg /usr/bin/ffmpeg && \
+    cp ffprobe /usr/bin/ffprobe && \
+    chmod +x /usr/bin/ffmpeg && \
+    chmod +x /usr/bin/ffprobe
 
 #-----------------------------------
 # Install Golang

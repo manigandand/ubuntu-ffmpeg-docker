@@ -7,10 +7,10 @@ RUN apt-get install -y wget gcc curl xz-utils
 #-----------------------------------
 # Install ffmpeg
 RUN wget -P /tmp https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz
-RUN cd /tmp && tar xf ffmpeg-release-64bit-static.tar.xz
-#RUN tar -C /tmp xf /tmp/ffmpeg-release-64bit-static.tar.xz
-#RUN cd /tmp && ls
-RUN cd /tmp/ffmpeg-3.3.2-64bit-static && \
+RUN cd /tmp && \
+    tar xf ffmpeg-release-64bit-static.tar.xz && \
+    ls && \
+    cd ffmpeg-3.3.2-64bit-static/ && \
     cp ffmpeg /usr/bin/ffmpeg && \
     cp ffprobe /usr/bin/ffprobe && \
     chmod +x /usr/bin/ffmpeg && \

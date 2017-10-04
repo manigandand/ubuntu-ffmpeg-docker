@@ -1,14 +1,12 @@
-#!/bin/bash
 FROM ubuntu:latest
 
 MAINTAINER Manigandan Dharmalingam <manigandan.jeff@gmail.com>
+
 RUN apt-get update
 RUN apt-get install -y wget gcc curl
 #-----------------------------------
 # Install ffmpeg
 RUN wget -P /tmp https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz
-#RUN cd /tmp
-#RUN ls
 RUN tar -C /tmp -xzf /tmp/ffmpeg-release-64bit-static.tar.xz
 RUN cd /tmp && ls
 RUN cd /tmp/ffmpeg-3.3.2-64bit-static && \

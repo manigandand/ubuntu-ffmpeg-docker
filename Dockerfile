@@ -30,5 +30,3 @@ WORKDIR $GOPATH
 #-----------------------------------
 # Install golang - glide
 RUN curl https://glide.sh/get | sh
-
-ENTRYPOINT ["/bin/bash"]

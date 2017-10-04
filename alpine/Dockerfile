@@ -1,5 +1,5 @@
 #!/bin/bash
-FROM debian:jessie
+FROM alpine:latest
 
 MAINTAINER Manigandan Dharmalingam <manigandan.jeff@gmail.com>
 

@@ -17,7 +17,6 @@ RUN cd /tmp/ffmpeg-3.3.2-64bit-static && cp ffmpeg /usr/bin/ffmpeg
 #-----------------------------------
 # Install Golang
 RUN wget -P /tmp https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz
-
 RUN tar -C /usr/local -xzf /tmp/go1.8.3.linux-amd64.tar.gz
 RUN rm /tmp/go1.8.3.linux-amd64.tar.gz
 

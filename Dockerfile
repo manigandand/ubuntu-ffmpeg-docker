@@ -10,7 +10,7 @@ RUN wget -P /tmp https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-
 RUN cd /tmp && \
     tar xf ffmpeg-release-64bit-static.tar.xz && \
     ls && \
-    cd ffmpeg-3.3.2-64bit-static/ && \
+    cd ffmpeg-3.3.4-64bit-static/ && \
     cp ffmpeg /usr/bin/ffmpeg && \
     cp ffprobe /usr/bin/ffprobe && \
     chmod +x /usr/bin/ffmpeg && \

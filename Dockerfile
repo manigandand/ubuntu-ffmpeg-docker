@@ -3,7 +3,7 @@ FROM debian:jessie
 MAINTAINER Manigandan Dharmalingam <manigandan.jeff@gmail.com>
 
 RUN apt-get update
-RUN apt-get install -y wget gcc curl xz-utils
+RUN apt-get install -y wget gcc curl xz-utils git
 #-----------------------------------
 # Install ffmpeg
 RUN wget -P /tmp https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz
@@ -14,7 +14,9 @@ RUN cd /tmp && \
     cp ffmpeg /usr/bin/ffmpeg && \
     cp ffprobe /usr/bin/ffprobe && \
     chmod +x /usr/bin/ffmpeg && \
-    chmod +x /usr/bin/ffprobe
+    chmod +x /usr/bin/ffprobe && \
+    rm ffmpeg-release-64bit-static.tar.xz
+
 #-----------------------------------
 # Install Golang
 RUN wget -P /tmp https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz

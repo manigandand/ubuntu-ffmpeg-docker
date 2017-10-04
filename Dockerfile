@@ -14,9 +14,7 @@ RUN cd /tmp && \
     cp ffmpeg /usr/bin/ffmpeg && \
     cp ffprobe /usr/bin/ffprobe && \
     chmod +x /usr/bin/ffmpeg && \
-    chmod +x /usr/bin/ffprobe && \
-    rm ffmpeg-release-64bit-static.tar.xz
-
+    chmod +x /usr/bin/ffprobe
 #-----------------------------------
 # Install Golang
 RUN wget -P /tmp https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz

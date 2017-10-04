@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM debian:jessie
 
 MAINTAINER Manigandan Dharmalingam <manigandan.jeff@gmail.com>
 
